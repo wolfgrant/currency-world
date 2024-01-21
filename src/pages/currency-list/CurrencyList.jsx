@@ -46,7 +46,7 @@ function CurrencyList() {
                 <table>
                     <thead>
                         <tr>
-                            <th>Cap</th>
+                            <th>Capitalización</th>
                             <th>Abreviación</th>
                             <th>Precio</th>
                             <th>Volumen</th>
