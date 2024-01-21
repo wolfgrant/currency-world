@@ -50,27 +50,27 @@ function CurrencyList() {
                     </div>
                     <div className="info">
                         <div className="category">
-                            <p>Rank: #{currency?.rank}</p>
-                            <p>Market Cap: ${currency?.cap}</p>
+                            <p>Rango: #{currency?.rank}</p>
+                            <p>Capitalización de Mercado: ${currency?.cap}</p>
                         </div>
                         <div className="category">
-                            <p>Circulating Supply: {currency?.circulatingSupply}</p>
-                            <p>Total Supply: {currency?.totalSupply}</p>
+                            <p>Suministro Circulante: {currency?.circulatingSupply}</p>
+                            <p>Suministro Total: {currency?.totalSupply}</p>
                         </div>
                     </div>
                     <div className="links">
-                        <p>Links:</p>
+                        <p>Enlaces:</p>
                         <ul>
-                            <li><a href={currency?.links?.website} target="_blank" rel="noopener noreferrer">Website</a></li>
+                            <li><a href={currency?.links?.website} target="_blank" rel="noopener noreferrer">Sitio web</a></li>
                             <li><a href={currency?.links?.whitepaper} target="_blank" rel="noopener noreferrer">Whitepaper</a></li>
                         </ul>
                     </div>
                     <div className="delta">
                         <p>Delta:</p>
                         <ul>
-                            <li>Hour: {currency?.delta?.hour}</li>
-                            <li>Day: {currency?.delta?.day}</li>
-                            <li>Week: {currency?.delta?.week}</li>
+                            <li>Hora: {currency?.delta?.hour}</li>
+                            <li>Día: {currency?.delta?.day}</li>
+                            <li>Semana: {currency?.delta?.week}</li>
                         </ul>
                     </div>
                     <div className="go-back">
