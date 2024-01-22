@@ -4,7 +4,7 @@ import useGetCurrencies from '../../hooks/useGetCurrencies'
 
 function CurrencyList() {
     
-    const {currencies, loading } = useGetCurrencies()
+    const { currencies, loading } = useGetCurrencies()
 
     return (
         <div className={`currency-list ${loading ? 'loading' : ''}`}>
