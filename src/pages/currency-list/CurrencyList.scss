@@ -34,6 +34,7 @@ $lightGray: #ecf0f1;
             margin-left: 10px;
         }
     }
+
     table {
         width: 100%;
         border-collapse: collapse;
@@ -61,6 +62,12 @@ $lightGray: #ecf0f1;
             background-color: #f5f5f5;
             transition: background-color 0.3s;
         }
+
+        @media only screen and (min-width: 768px) {
+            .hidden-desktop {
+                display: none;
+            }
+        }
     }
 
     button {
@@ -84,5 +91,37 @@ $lightGray: #ecf0f1;
     .icon-view {
         font-size: 18px;
         margin-right: 5px;
+    }
+
+    @media only screen and (max-width: 767px) {
+        table {
+            th,
+            td {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            tr {
+                margin-bottom: 10px;
+                display: block;
+            }
+
+            td {
+                text-align: left;
+            }
+
+            // Ocultar el nombre de la columna si no es necesario
+            .hidden {
+                display: none;
+            }
+
+            // Estilos de las dos columnas
+            .column {
+                display: flex;
+                margin-right: 10px;
+                justify-content: space-between;
+            }
+        }
     }
 }
