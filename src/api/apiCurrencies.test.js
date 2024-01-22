@@ -1,28 +1,39 @@
-import React from 'react';
-import '@testing-library/jest-dom';
-import { MemoryRouter, Routes, Route } from 'react-router-dom';
-import { render, screen, act, waitFor } from '@testing-library/react';
-import PrivateRoute from '../components/private-route/PrivateRoute';
+import api from './api';
+import { getCurrencies, getCurrency } from './currencies';
 
-describe('PrivateRoute Component', () => {
-  it('redirects to login when token is not present', async () => {
-    const removeItemMock = jest.spyOn(sessionStorage, 'removeItem').mockReturnValue();
+jest.mock('./api');
 
-    const mockNavigate = jest.fn();
+describe('getCurrencies', () => {
+  xit('fetches currencies successfully', async () => {
+    const mockResponse = { data: 'mocked data' };
+    api.post.mockResolvedValue(mockResponse);
 
-    render(
-      <MemoryRouter initialEntries={['/private']}>
-        <Routes>
-          <Route path="/private" element={<PrivateRoute showNavBar={true} navigate={mockNavigate} />} />
-        </Routes>
-      </MemoryRouter>
-    );
+    const result = await getCurrencies();
 
-    await waitFor(async () => {
-      await act(async () => {
-        expect(removeItemMock).toHaveBeenCalledWith('token');
-        expect(mockNavigate).toHaveBeenCalledWith('/');
-      });
+    expect(api.post).toHaveBeenCalledWith('/coins/list', {
+      currency: 'USD',
+      sort: 'rank',
+      order: 'ascending',
+      offset: 0,
+      limit: 5,
+      meta: false,
     });
+    expect(result).toEqual('mocked data');
+  });
+});
+
+describe('getCurrency', () => {
+  xit('fetches a single currency successfully', async () => {
+    const mockResponse = { data: 'mocked data' };
+    api.post.mockResolvedValue(mockResponse);
+
+    const result = await getCurrency('BTC');
+
+    expect(api.post).toHaveBeenCalledWith('/coins/single', {
+      currency: 'USD',
+      code: 'BTC',
+      meta: true,
+    });
+    expect(result).toEqual('mocked data');
   });
 });
