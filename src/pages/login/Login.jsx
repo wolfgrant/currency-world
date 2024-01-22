@@ -41,7 +41,7 @@ function Login() {
                     placeholder="Ingrese su contraseña"
                 />
 
-                <button type="submit" disabled={isButtonDisabled}> {/* Corregir el atributo 'sumbit' a 'submit' */}
+                <button type="submit" disabled={isButtonDisabled}>
                     Iniciar Sesión
                 </button>
             </form>
