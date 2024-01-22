@@ -1,7 +1,8 @@
+// eslint-disable-next-line no-unused-vars
+import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import NavBar from '../nav-bar/NavBar';
-import { useEffect } from 'react';
 
 
 const PrivateRoute = ({ children, showNavBar }) => {
@@ -27,8 +28,8 @@ const PrivateRoute = ({ children, showNavBar }) => {
 }
 
 PrivateRoute.propTypes = {
-    children: PropTypes.node, //Método del botón
-    showNavBar: PropTypes.bool, //Método del botón
+    children: PropTypes.node,
+    showNavBar: PropTypes.bool,
 };
 
 
