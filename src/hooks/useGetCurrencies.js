@@ -7,16 +7,12 @@ const useGetCurrencies = () => {
   const [currencies, setCurrencies] = useState([]);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
-  const [disabledButtonLast, setDisabledButtonLast] = useState(true);
 
   const consumeApi = async (offset) => {
     try {
       setLoading(true);
       const response = await getCurrencies(offset);
       setCurrencies(response);
-
-      // Verificar si hay más páginas
-      setDisabledButtonLast(response.length < PAGE_LIMIT);
 
     } catch (error) {
       console.error('Error en la solicitud:', error.message);
@@ -50,7 +46,6 @@ const useGetCurrencies = () => {
     getCurrency,
     currencies,
     loading,
-    disabledButtonLast
   };
 };
 

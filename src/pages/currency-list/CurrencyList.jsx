@@ -6,7 +6,7 @@ import useGetCurrencies from '../../hooks/useGetCurrencies'
 
 function CurrencyList() {
 
-    const { page, handlePreviousPage, handleNextPage, currencies, loading, disabledButtonLast } = useGetCurrencies();
+    const { page, handlePreviousPage, handleNextPage, currencies, loading } = useGetCurrencies();
 
     const textsPagionator = {
         lastPage: "< Página anterior",
