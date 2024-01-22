@@ -50,7 +50,6 @@ describe('CurrencyDetail Component', () => {
       expect(screen.getByText('Volver')).toBeInTheDocument();
     });
 
-    // Verifica que los elementos clave estén presentes en la interfaz
     expect(screen.getByAltText('Bitcoin Logo')).toBeInTheDocument();
     expect(screen.getByText('Rango: #1')).toBeInTheDocument();
     expect(screen.getByText('Capitalización de Mercado: $1000000000')).toBeInTheDocument();
