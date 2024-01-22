@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import jsonData from '../configs/jsonForLogin.json';
+import { emailRegex as regex } from '../configs/regex.js';
 
 const useLogin = () => {
   const [loginError, setLoginError] = useState('');
-  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   const navigate = useNavigate();
+  const emailR = regex
 
   const loginUser = (formData) => {
     const { username, password } = formData;
@@ -27,7 +28,7 @@ const useLogin = () => {
   return {
     loginUser,
     loginError,
-    emailRegex,
+    emailR,
   };
 };
 

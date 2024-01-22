@@ -19,14 +19,14 @@ function Routing() {
         <Route
           path="/list"
           element={
-            <PrivateRoute>
+            <PrivateRoute showNavBar={true}>
               <CurrencyList />
             </PrivateRoute>
           } />
         <Route
           path="/detail/:code"
           element={
-            <PrivateRoute>
+            <PrivateRoute showNavBar={true}>
               <CurrencyDetail />
             </PrivateRoute>
           } />

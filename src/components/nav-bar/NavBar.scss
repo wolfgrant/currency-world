@@ -1,0 +1,67 @@
+$primaryColor: #3498db;
+$darkColor: #2c3e50;
+$lightGray: #ecf0f1;
+
+.navbar {
+  background-color: $primaryColor;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: calc(100% - 30px);
+  top: 0;
+  left: 0;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-item {
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $darkColor;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+}
+
+// Responsive styles
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-nav {
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .nav-item {
+    padding: 8px;
+  }
+}
