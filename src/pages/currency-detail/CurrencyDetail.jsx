@@ -5,16 +5,7 @@ import useGetCurrency from '../../hooks/useGetCurrency'
 function CurrencyDetail() {
     const { code } = useParams();
 
-    const apiUrl = 'https://api.livecoinwatch.com/coins/single';
-    const apiKey = '325d4324-0fdb-4e5e-ae91-8ae08fdd8c1e';
-
-    const requestData = {
-        currency: 'USD',
-        code: code,
-        meta: true,
-    };
-
-    const {currencies, loading } = useGetCurrency(apiUrl, apiKey, requestData)
+    const {currencies, loading } = useGetCurrency(code)
 
     return (
         <div className={`currency-details ${loading ? 'loading' : ''}`}>

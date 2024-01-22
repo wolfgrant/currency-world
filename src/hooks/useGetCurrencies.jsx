@@ -1,17 +1,16 @@
 import { useEffect, useState } from 'react'
-import { getCurrency } from '../api/apiCurrencies';
+import { getCurrencies } from '../api/apiCurrencies'
 
-
-const useGetCurrency = (code) => {
+const useGetCurrencies = () => {
 
     const [currencies, setCurrencies] = useState();
     const [loading, setLoading] = useState(true);
 
-    const getRequestCurrency = async () => {
+    const getCurrency = async () => {
 
         try {
             setLoading(true);
-            const response = await getCurrency(code);
+            const response = await getCurrencies();
             setCurrencies(response);
         } catch (error) {
             console.error('Error en la solicitud:', error.message);
@@ -21,8 +20,9 @@ const useGetCurrency = (code) => {
     }
 
     useEffect(() => {
-        getRequestCurrency()
-    }, [code])
+
+        getCurrency()
+    }, [])
 
 
     return {
@@ -31,4 +31,4 @@ const useGetCurrency = (code) => {
     }
 }
 
-export default useGetCurrency;
+export default useGetCurrencies;

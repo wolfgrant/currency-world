@@ -1,22 +1,10 @@
 import './CurrencyList.scss'
 import { Link } from 'react-router-dom';
-import useGetCurrency from '../../hooks/useGetCurrency'
+import useGetCurrencies from '../../hooks/useGetCurrencies'
 
 function CurrencyList() {
-
-    const apiUrl = 'https://api.livecoinwatch.com/coins/list';
-    const apiKey = '325d4324-0fdb-4e5e-ae91-8ae08fdd8c1e';
-
-    const requestData = {
-        currency: 'USD',
-        sort: 'rank',
-        order: 'ascending',
-        offset: 0,
-        limit: 5,
-        meta: false,
-    };
     
-    const {currencies, loading } = useGetCurrency(apiUrl, apiKey, requestData)
+    const {currencies, loading } = useGetCurrencies()
 
     return (
         <div className={`currency-list ${loading ? 'loading' : ''}`}>
