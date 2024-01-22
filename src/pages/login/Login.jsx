@@ -1,23 +1,24 @@
 import './Login.scss';
 import useLogin from '../../hooks/useLogin';
 import useInputChange from '../../hooks/useInputChange';
+import { sqlInyectionRegex } from '../../configs/regex';
 
 function Login() {
-    
+
     const { formData, handleInputChange } = useInputChange({
         username: '',
         password: ''
-    })
+    });
 
-    const {loginError, emailRegex, loginUser} = useLogin()
-
+    const { loginError, emailR, loginUser } = useLogin();
+    const regexSQL = sqlInyectionRegex
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        loginUser(formData)
+        loginUser(formData);
     };
 
-    const isButtonDisabled = !RegExp(emailRegex).exec(formData.username) || formData.password === '';
+    const isButtonDisabled = !RegExp(emailR).exec(formData.username) || formData.password === '';
 
     return (
         <div className="login-container">
@@ -28,7 +29,7 @@ function Login() {
                     type="email"
                     id="username"
                     value={formData.username}
-                    onChange={(e) => handleInputChange('username', e.target.value)}
+                    onChange={(e) => handleInputChange('username', e.target.value, regexSQL)}
                     placeholder="Ingrese su usuario"
                 />
 
