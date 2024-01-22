@@ -5,6 +5,12 @@ $lightGray: #ecf0f1;
 .currency-list {
     width: 100%;
     text-align: center;
+    margin-top: 55px;
+
+    @media only screen and (max-width: 768px) {
+        margin-top: 89px;
+    
+    }
 
     &.loading {
         display: flex;
@@ -92,7 +98,6 @@ $lightGray: #ecf0f1;
         font-size: 18px;
         margin-right: 5px;
     }
-
     @media only screen and (max-width: 767px) {
         table {
             th,
