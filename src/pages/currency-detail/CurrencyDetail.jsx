@@ -43,7 +43,7 @@ function CurrencyDetail() {
                         </ul>
                     </div>
                     <div className="go-back">
-                        <Link to="/">
+                        <Link to="/list">
                             <button>Volver</button>
                         </Link>
                     </div>

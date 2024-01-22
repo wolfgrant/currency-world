@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import useGetCurrencies from '../../hooks/useGetCurrencies'
 
 function CurrencyList() {
-    
+
     const { currencies, loading } = useGetCurrencies()
 
     return (
@@ -12,7 +12,7 @@ function CurrencyList() {
                 <p>Cargando... <span className="loading-spinner"></span></p>
             ) : (
                 <table>
-                    <thead>
+                    <thead className='hidden'>
                         <tr>
                             <th>Capitalización</th>
                             <th>Abreviación</th>
@@ -24,10 +24,27 @@ function CurrencyList() {
                     <tbody>
                         {currencies?.map((currency, index) => (
                             <tr key={index}>
-                                <td>{currency.cap}</td>
-                                <td>{currency.code}</td>
-                                <td>{currency.rate}</td>
-                                <td>{currency.volume}</td>
+                                {/* Primera columna: Code y Cap */}
+                                <td className='hidden'>{currency.cap}</td>
+                                <td className='hidden'>{currency.code}</td>
+                                <td className='hidden'>{currency.volume}</td>
+                                <td className='hidden'>$ {currency.rate}</td>
+                                <td className='hidden-desktop'>
+                                    <div className="column">
+                                        <div style={{order: 2}}>{currency.cap}</div>
+                                        <div style={{order: 1}}>{currency.code}</div>
+                                    </div>
+                                </td>
+
+                                {/* Segunda columna: Rate y Volume */}
+                                <td className='hidden-desktop'>
+                                    <div className="column">
+                                        <div >{currency.volume}</div>
+                                        <div>$ {currency.rate}</div>
+                                    </div>
+                                </td>
+
+                                {/* Enlace para detalles */}
                                 <td>
                                     <Link to={`/detail/${currency.code}`}>
                                         <button className="icon-view">&#128065;</button>

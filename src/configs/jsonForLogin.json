@@ -1,0 +1,20 @@
+{
+    "usuarios": [
+      {
+        "usuario": "usuario1@asd.com",
+        "password": "clave123"
+      },
+      {
+        "usuario": "usuario2@asd.com",
+        "password": "password456"
+      },
+      {
+        "usuario": "usuario3@asd.com",
+        "password": "secreto789"
+      },
+      {
+        "usuario": "admin@asd.com",
+        "password": "admin123"
+      }
+    ]
+  }
