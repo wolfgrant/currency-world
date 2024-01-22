@@ -1,18 +1,22 @@
-import { Navigate, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import NavBar from '../nav-bar/NavBar';
+import { useEffect } from 'react';
 
 
 const PrivateRoute = ({ children, showNavBar }) => {
     const token = sessionStorage.getItem('token');
     const location = useLocation();
-    const currentPath = location.pathname
+    const currentPath = location.pathname;
+    const navigate = useNavigate();
 
-    if (!token && currentPath !== "/") {
-        return <Navigate to="/" />
-    } else if (token && currentPath === "/") {
-        return <Navigate to="/list" />
-    }
+    useEffect(() => {
+        if (!token && currentPath !== "/") {
+            navigate("/");
+        } else if (token && currentPath === "/") {
+            navigate("/list");
+        }
+    }, [token, currentPath, navigate]);
 
     return (
         <div>

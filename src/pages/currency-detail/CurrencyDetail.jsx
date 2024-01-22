@@ -15,7 +15,7 @@ function CurrencyDetail() {
                 <>
                     <div className="header">
                         <img src={currencies?.png64} alt={`${currencies?.name} Logo`} />
-                        <h1>{`${currencies?.name} (${currencies?.symbol ?? ''})`}</h1>
+                        <h1>{`${currencies?.name} ${currencies?.symbol ? `(${currencies?.symbol})` : ''}`}</h1>
                     </div>
                     <div className="info">
                         <div className="category">
