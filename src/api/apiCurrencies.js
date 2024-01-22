@@ -1,11 +1,11 @@
 import api from "./api";
 
-export const getCurrencies = async () =>{
+export const getCurrencies = async (offset) =>{
     const requestData = {
         currency: 'USD',
         sort: 'rank',
         order: 'ascending',
-        offset: 0,
+        offset: offset,
         limit: 5,
         meta: false,
     };

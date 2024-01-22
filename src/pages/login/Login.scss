@@ -1,53 +1,52 @@
 .login-container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  
-    h2 {
-      text-align: center;
-      color: #FFFFFF;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    text-align: center;
+    color: #ffffff;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #ffffff;
     }
-  
-    form {
-      display: flex;
-      flex-direction: column;
-  
-      label {
-        margin-bottom: 8px;
-        font-weight: bold;
-        color: #FFFFFF;
+
+    input {
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+
+      &:hover {
+        background-color: #0056b3;
       }
-  
-      input {
-        padding: 10px;
-        margin-bottom: 16px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        font-size: 14px;
-      }
-  
-      button {
-        background-color: #007bff;
-        color: #fff;
-        padding: 10px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 16px;
-  
-        &:hover {
-          background-color: #0056b3;
-        }
-        &:disabled {
-            cursor: not-allowed;
-            opacity: 0.6; 
-            background-color: #ccc; 
-            color: #666; 
-            
-          }
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+        background-color: #ccc;
+        color: #666;
       }
     }
   }
+}

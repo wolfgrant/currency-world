@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1705947320365" clover="3.2.0">
+  <project timestamp="1705947320365" name="All files">
+    <metrics statements="85" coveredstatements="56" conditionals="32" coveredconditionals="15" methods="25" coveredmethods="15" elements="142" coveredelements="86" complexity="0" loc="85" ncloc="85" packages="8" files="12" classes="12"/>
+    <package name="api">
+      <metrics statements="7" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="api.js" path="C:\proyectos\currency-world\src\api\api.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="apiCurrencies.js" path="C:\proyectos\currency-world\src\api\apiCurrencies.js">
+        <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.nav-bar">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="NavBar.jsx" path="C:\proyectos\currency-world\src\components\nav-bar\NavBar.jsx">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.private-route">
+      <metrics statements="12" coveredstatements="10" conditionals="10" coveredconditionals="5" methods="2" coveredmethods="2"/>
+      <file name="PrivateRoute.jsx" path="C:\proyectos\currency-world\src\components\private-route\PrivateRoute.jsx">
+        <metrics statements="12" coveredstatements="10" conditionals="10" coveredconditionals="5" methods="2" coveredmethods="2"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="configs">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="config.js" path="C:\proyectos\currency-world\src\configs\config.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+      <file name="regex.js" path="C:\proyectos\currency-world\src\configs\regex.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="hooks">
+      <metrics statements="40" coveredstatements="19" conditionals="8" coveredconditionals="3" methods="10" coveredmethods="5"/>
+      <file name="useGetCurrencies.js" path="C:\proyectos\currency-world\src\hooks\useGetCurrencies.js">
+        <metrics statements="13" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+      </file>
+      <file name="useInputChange.js" path="C:\proyectos\currency-world\src\hooks\useInputChange.js">
+        <metrics statements="12" coveredstatements="12" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="4"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+      </file>
+      <file name="useLogin.js" path="C:\proyectos\currency-world\src\hooks\useLogin.js">
+        <metrics statements="15" coveredstatements="6" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="28" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.currency-detail">
+      <metrics statements="3" coveredstatements="3" conditionals="6" coveredconditionals="3" methods="1" coveredmethods="1"/>
+      <file name="CurrencyDetail.jsx" path="C:\proyectos\currency-world\src\pages\currency-detail\CurrencyDetail.jsx">
+        <metrics statements="3" coveredstatements="3" conditionals="6" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.currency-list">
+      <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="CurrencyList.jsx" path="C:\proyectos\currency-world\src\pages\currency-list\CurrencyList.jsx">
+        <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="pages.login">
+      <metrics statements="10" coveredstatements="8" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="3"/>
+      <file name="Login.jsx" path="C:\proyectos\currency-world\src\pages\login\Login.jsx">
+        <metrics statements="10" coveredstatements="8" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="3"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="25" count="4" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

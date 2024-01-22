@@ -1,3 +1,12 @@
+## Access
+
+user: usuario1@asd.com
+password: clave123
+
+## Unit Test
+
+Jest: "^6.2.0"
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

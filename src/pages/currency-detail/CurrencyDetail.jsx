@@ -1,3 +1,5 @@
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
 import './CurrencyDetail.scss';
 import { Link, useParams } from 'react-router-dom';
 import useGetCurrency from '../../hooks/useGetCurrency'
