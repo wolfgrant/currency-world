@@ -8,7 +8,8 @@ const useGetCurrencies = () => {
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
 
-  const consumeApi = async (offset) => {
+  const consumeApi = async (currentPage) => {
+    const offset = (currentPage - 1) * PAGE_LIMIT;
     try {
       setLoading(true);
       const response = await getCurrencies(offset);
@@ -29,21 +30,14 @@ const useGetCurrencies = () => {
     setPage((prevPage) => prevPage - 1);
   }
 
-  const getCurrency = async () => {
-    const offset = (page - 1) * PAGE_LIMIT;
-    consumeApi(offset)
-  };
-
   useEffect(() => {
-    // Obtener datos iniciales al cargar el componente
-    getCurrency();
+    consumeApi(page);
   }, [page]);
 
   return {
     page,
     handleNextPage,
     handlePreviousPage,
-    getCurrency,
     currencies,
     loading,
   };
