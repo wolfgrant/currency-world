@@ -7,7 +7,7 @@ export const getCurrencies = async (offset) =>{
         order: 'ascending',
         offset: offset,
         limit: 5,
-        meta: false,
+        meta: true,
     };
 
     return api.post('/coins/list', requestData).then(reponse => reponse.data)
